@@ -23,6 +23,12 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import LAUnit1 from './components/LAUnit1.tsx';
+import LAUnit2 from './components/LAUnit2.tsx';
+import LAUnit3 from './components/LAUnit3.tsx';
+import LAUnit4 from './components/LAUnit4.tsx';
+import LAUnit5 from './components/LAUnit5.tsx';
+import LAUnit6 from './components/LAUnit6.tsx';
+import PHUnit1 from './components/PHUnit1.tsx';
 
 // --- Types ---
 interface Topic {
@@ -186,6 +192,30 @@ export default function App() {
 
   if (view === 'module-la1') {
     return <LAUnit1 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-la2') {
+    return <LAUnit2 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-la3') {
+    return <LAUnit3 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-la4') {
+    return <LAUnit4 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-la5') {
+    return <LAUnit5 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-la6') {
+    return <LAUnit6 onBack={() => setView('la111')} />;
+  }
+
+  if (view === 'module-ph1') {
+    return <PHUnit1 onBack={() => setView('physics')} />;
   }
 
   return (
@@ -408,6 +438,12 @@ export default function App() {
                         <button 
                           onClick={() => {
                             if (topic.id === 'la1') setView('module-la1');
+                            if (topic.id === 'la2') setView('module-la2');
+                            if (topic.id === 'la3') setView('module-la3');
+                            if (topic.id === 'la4') setView('module-la4');
+                            if (topic.id === 'la5') setView('module-la5');
+                            if (topic.id === 'la6') setView('module-la6');
+                            if (topic.id === 'ph1') setView('module-ph1');
                           }}
                           className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-bold text-sm transition-colors shadow-lg shadow-emerald-900/20"
                         >
